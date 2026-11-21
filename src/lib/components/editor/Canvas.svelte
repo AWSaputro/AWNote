@@ -5,6 +5,7 @@
 	import { optimizeStrokePoints, strokeIntersectsCircle } from '#lib/engine/rdp';
 
 	interface Props {
+		initialStrokes?: Stroke[];
 		currentTool?: ToolType;
 		currentColor?: string;
 		currentSize?: number;
@@ -14,9 +15,11 @@
 		paperTemplate?: PaperTemplate;
 		isDarkPaper?: boolean;
 		onHistoryChange?: (canUndo: boolean, canRedo: boolean) => void;
+		onStrokesChange?: (strokes: Stroke[]) => void;
 	}
 
 	let {
+		initialStrokes = [],
 		currentTool = 'pen',
 		currentColor = '#1e293b',
 		currentSize = 4,
@@ -25,7 +28,8 @@
 		eraserRadius = 16,
 		paperTemplate = 'ruled',
 		isDarkPaper = false,
-		onHistoryChange
+		onHistoryChange,
+		onStrokesChange
 	}: Props = $props();
 
 	let containerEl: HTMLDivElement | null = null;
@@ -92,6 +96,7 @@
 			strokes.length > 0 || historyPast.length > 0,
 			redoStack.length > 0
 		);
+		onStrokesChange?.(strokes);
 	}
 
 	function setupCanvasSize() {
@@ -269,6 +274,7 @@
 			if (modified) {
 				strokes = remainingStrokes;
 				redrawAllStrokes();
+				notifyHistory();
 			}
 		} else {
 			// Pixel eraser mode: clear a circular area on base canvas and filter/split
@@ -284,6 +290,7 @@
 	}
 
 	onMount(() => {
+		strokes = [...initialStrokes];
 		setupCanvasSize();
 		window.addEventListener('resize', setupCanvasSize);
 		return () => {

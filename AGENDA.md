@@ -24,8 +24,8 @@ Dokumen ini adalah acuan resmi alur pengembangan aplikasi **AwNotes** (Web-based
 | Versi | Status | Target Pencapaian |
 | :--- | :---: | :--- |
 | **v0.1.0** | 🟢 *Completed* | Fondasi Proyek, Canvas Core Inking (Pen, Pensil, Stabilo, Eraser), Undo/Redo |
-| **v0.2.0** | 🟡 *Next* | Database Lokal (Dexie.js), Dashboard, Folder, FAB Kiri, Auto-save |
-| **v0.3.0** | ⚪ *Planned* | Floating Dock Fleksibel, Objek Geometri, Lasso, Hold-to-Snap, Easy Writing Pad, Gambar |
+| **v0.2.0** | 🟢 *Completed* | Database Lokal (Dexie.js), Dashboard, Folder, FAB Kiri, Auto-save |
+| **v0.3.0** | 🟡 *Next* | Floating Dock Fleksibel, Objek Geometri, Lasso, Hold-to-Snap, Easy Writing Pad, Gambar |
 | **v0.4.0** | ⚪ *Planned* | Import PDF (PDF.js), Anotasi di atas PDF, Ekspor PDF/PNG/`.awn` |
 | **v0.5.0** | ⚪ *Planned* | Login Akun Google (Member), Backup & Restore Google Drive |
 | **v0.6.0** | ⚪ *Planned* | PWA Offline Service Worker, Kustomisasi Keyboard Shortcuts, Polishing |
@@ -54,16 +54,16 @@ Dokumen ini adalah acuan resmi alur pengembangan aplikasi **AwNotes** (Web-based
 ---
 
 ### 📦 Sprint 2: Penyimpanan Lokal & Antarmuka Dashboard — `v0.2.0`
-- [ ] Setup skema database browser **IndexedDB (Dexie.js)**
-- [ ] Sistem Auto-save instan lokal (0ms) dengan status (`local_only`, `synced`, `modified`)
-- [ ] Membangun antarmuka **Layar 1 (Dashboard)**:
-  - [ ] Profil pengguna di bagian paling atas sidebar (Avatar + Nama / Tombol Login)
-  - [ ] Manajemen folder hierarkis & filter tag
-  - [ ] Tombol Pengaturan di bagian paling bawah sidebar (Dark Mode, Backup, dll.)
-  - [ ] Tombol **FAB `[+]` Tambah Catatan di sebelah kiri bawah**
-- [ ] Tampilan catatan dalam format **Grid** & **List**
-- [ ] Pembuatan thumbnail visual otomatis dari lembar pertama catatan
-- [ ] Unit test: Pengujian CRUD database Dexie.js dan integritas data
+- [x] Setup skema database browser **IndexedDB (Dexie.js)**
+- [x] Sistem Auto-save instan lokal (0ms) dengan status (`local_only`, `synced`, `modified`)
+- [x] Membangun antarmuka **Layar 1 (Dashboard)**:
+  - [x] Profil pengguna di bagian paling atas sidebar (Avatar + Nama / Tombol Login)
+  - [x] Manajemen folder hierarkis & filter tag
+  - [x] Tombol Pengaturan di bagian paling bawah sidebar (Dark Mode, Backup, dll.)
+  - [x] Tombol **FAB `[+]` Tambah Catatan di sebelah kiri bawah**
+- [x] Tampilan catatan dalam format **Grid** & **List**
+- [x] Pembuatan thumbnail visual otomatis dari lembar pertama catatan
+- [x] Unit test: Pengujian CRUD database Dexie.js dan integritas data
 
 ---
 
