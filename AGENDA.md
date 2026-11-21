@@ -23,8 +23,8 @@ Dokumen ini adalah acuan resmi alur pengembangan aplikasi **AwNotes** (Web-based
 
 | Versi | Status | Target Pencapaian |
 | :--- | :---: | :--- |
-| **v0.1.0** | 🟡 *Next* | Fondasi Proyek, Canvas Core Inking (Pen, Pensil, Stabilo, Eraser), Undo/Redo |
-| **v0.2.0** | ⚪ *Planned* | Database Lokal (Dexie.js), Dashboard, Folder, FAB Kiri, Auto-save |
+| **v0.1.0** | 🟢 *Completed* | Fondasi Proyek, Canvas Core Inking (Pen, Pensil, Stabilo, Eraser), Undo/Redo |
+| **v0.2.0** | 🟡 *Next* | Database Lokal (Dexie.js), Dashboard, Folder, FAB Kiri, Auto-save |
 | **v0.3.0** | ⚪ *Planned* | Floating Dock Fleksibel, Objek Geometri, Lasso, Hold-to-Snap, Easy Writing Pad, Gambar |
 | **v0.4.0** | ⚪ *Planned* | Import PDF (PDF.js), Anotasi di atas PDF, Ekspor PDF/PNG/`.awn` |
 | **v0.5.0** | ⚪ *Planned* | Login Akun Google (Member), Backup & Restore Google Drive |
@@ -37,19 +37,19 @@ Dokumen ini adalah acuan resmi alur pengembangan aplikasi **AwNotes** (Web-based
 ## 🚀 Rincian Sprint & Checklist Pengembangan
 
 ### 📦 Sprint 1: Fondasi Proyek & Mesin Tinta Inti (Core Inking Engine) — `v0.1.0`
-- [ ] Inisialisasi proyek SvelteKit dengan Bun
-- [ ] Konfigurasi Tailwind CSS dan Flowbite Svelte
-- [ ] Setup adapter statis (`@sveltejs/adapter-static`) dengan base path `/awnotes`
-- [ ] Setup utilitas **Logger Terpusat** (`src/lib/utils/logger.ts`) & konfigurasi **Vitest**
-- [ ] Buat komponen kanvas dengan dukungan *Pointer Events API* (`pointerType: pen, touch, mouse`)
-- [ ] Integrasi algoritma goresan halus & tekanan stylus (`perfect-freehand`)
-- [ ] Implementasi alat dasar:
-  - [ ] **Pen**: Ujung tinta solid dengan sensitivitas tekanan
-  - [ ] **Pensil**: Sistem grade standar (**2H, H, HB, B, 2B, 4B, 6B**)
-  - [ ] **Stabilo / Highlighter**: Multiply blend mode (semi-transparan di atas teks/garis)
-  - [ ] **Penghapus**: Mode *Stroke Eraser* & *Pixel Eraser*
-- [ ] Sistem Undo & Redo (Vector stroke stack)
-- [ ] Pilihan template kertas dasar: Polos (*Blank*), Bergaris (*Ruled*), Kotak (*Grid*)
+- [x] Inisialisasi proyek SvelteKit dengan Bun
+- [x] Konfigurasi Tailwind CSS dan Flowbite Svelte
+- [x] Setup adapter statis (`@sveltejs/adapter-static`) dengan base path `/awnotes`
+- [x] Setup utilitas **Logger Terpusat** (`src/lib/utils/logger.ts`) & konfigurasi **Vitest**
+- [x] Buat komponen kanvas dengan dukungan *Pointer Events API* (`pointerType: pen, touch, mouse`)
+- [x] Integrasi algoritma goresan halus & tekanan stylus (`perfect-freehand`)
+- [x] Implementasi alat dasar:
+  - [x] **Pen**: Ujung tinta solid dengan sensitivitas tekanan
+  - [x] **Pensil**: Sistem grade standar (**2H, H, HB, B, 2B, 4B, 6B**)
+  - [x] **Stabilo / Highlighter**: Multiply blend mode (semi-transparan di atas teks/garis)
+  - [x] **Penghapus**: Mode *Stroke Eraser* & *Pixel Eraser*
+- [x] Sistem Undo & Redo (Vector stroke stack)
+- [x] Pilihan template kertas dasar: Polos (*Blank*), Bergaris (*Ruled*), Kotak (*Grid*)
 
 ---
 
